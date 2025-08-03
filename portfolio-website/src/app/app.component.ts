@@ -1,12 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio-website';
+  skills = ["AngularJS", "Python", "Java", "C++", "SQL", "Firebase", "Linux", "HTML", "CSS", "MongoDB", "Javascript", "Typescript", "Bootstrap"];
+  
+  projects = [
+    { title: "Recipe App", description: "A smart pantry & recipe generator", link: "https://github.com/subixsh04/Event-Management" },
+    { title: "Event Management Platform", description: "Full-stack event organizer", link: "https://github.com/subixsh04/Event-Management" },
+  ];
+
+  downloadResume() {
+    window.open("assets/Subiksha_Vaidhyanthan.pdf", "_blank");
+  }
 }

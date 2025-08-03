@@ -1,6 +1,40 @@
-<nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/projects">Projects</a>
-</nav>
+<div class="hero" data-aos="fade-up">
+  <img src="assets/Subiksha_Profile_Image.jpg" class="profile-pic" />
+  <h1 class="gradient-text">Hi, I'm Subiksha Vaidhyanathan</h1>
+  <p class="subtitle">
+    Junior at Wright State University | CS & Math Minor <br />
+    Passionate about Software Development & Innovation
+  </p>
+  <button class="btn" (click)="downloadResume()">⬇️ Download Resume</button>
+</div>
 
-<router-outlet></router-outlet>
+<div class="about" data-aos="fade-right">
+  <h2>About Me</h2>
+  <p>
+    I’m a Computer Science student passionate about building real-world
+    solutions, creating innovative projects, and learning new technologies.
+  </p>
+</div>
+
+<div class="skills" data-aos="zoom-in">
+  <h2>Skills</h2>
+  <div class="skill-tags">
+    <span *ngFor="let skill of skills">{{ skill }}</span>
+  </div>
+</div>
+
+<div class="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="project-card" *ngFor="let project of projects">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+    <a [href]="project.link" target="_blank">🔗 View on GitHub</a>
+  </div>
+</div>
+
+<div class="contact" data-aos="fade-up">
+  <h2>Let's Connect</h2>
+  <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+  <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+  <a href="mailto:subikshasvaidhyanathan@gmail.com">Email</a>
+</div>
