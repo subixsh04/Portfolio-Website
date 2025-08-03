@@ -1,40 +1,169 @@
-<div class="hero" data-aos="fade-up">
-  <img src="assets/Subiksha_Profile_Image.jpg" class="profile-pic" />
-  <h1 class="gradient-text">Hi, I'm Subiksha Vaidhyanathan</h1>
-  <p class="subtitle">
-    Junior at Wright State University | CS & Math Minor <br />
-    Passionate about Software Development & Innovation
-  </p>
-  <button class="btn" (click)="downloadResume()">⬇️ Download Resume</button>
-</div>
 
-<div class="about" data-aos="fade-right">
+
+<nav class="navbar">
+  <div class="nav-left" (click)="scrollToSection('hero')">Subiksha</div>
+
+  <div class="nav-center">
+    <a (click)="scrollToSection('about')">About</a>
+    <a (click)="scrollToSection('projects')">Projects</a>
+    <a (click)="scrollToSection('experience')">Experience</a>
+  </div>
+
+</nav>
+
+
+<section id="hero" class="hero-section">
+  <div class="hero-card">
+    <img src="assets/images/Subiksha_Profile_Image.jpg" class="profile-pic" />
+    <h1 class="typing-text"><span id="typed-name"></span></h1>
+    <button class="resume-btn" (click)="downloadResume()">📄 Download Resume</button>
+  </div>
+</section>
+
+<section id="about" class="about-section" data-aos="fade-up">
   <h2>About Me</h2>
   <p>
-    I’m a Computer Science student passionate about building real-world
-    solutions, creating innovative projects, and learning new technologies.
+    I’m Subiksha Vaidhyanathan, a Junior at Wright State University
+    majoring in Computer Science with a Mathematics minor. 
+    Passionate about software development, innovation, and solving real-world problems 
+    through technology. My vision is to become a leader in tech, contributing to impactful projects 
+    while inspiring others through my journey.
   </p>
-</div>
+</section>
 
-<div class="skills" data-aos="zoom-in">
+<section id="skills" class="skills-section" data-aos="zoom-in">
   <h2>Skills</h2>
-  <div class="skill-tags">
-    <span *ngFor="let skill of skills">{{ skill }}</span>
-  </div>
-</div>
+  <div class="skills-container">
+    <div class="skills-card">
+      <h3>Coding</h3>
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>Angular</li>
+        <li>HTML & CSS</li>
+      </ul>
+    </div>
 
-<div class="projects" data-aos="fade-up">
+    <div class="skills-card">
+      <h3>Databases</h3>
+      <ul>
+        <li>SQL</li>
+        <li>Firebase</li>
+        <li>MongoDB</li>
+      </ul>
+    </div>
+
+    <div class="skills-card">
+      <h3>Tools & IDEs</h3>
+      <ul>
+        <li>VS Code</li>
+        <li>Linux</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects-section" data-aos="fade-up">
   <h2>Projects</h2>
-  <div class="project-card" *ngFor="let project of projects">
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.description }}</p>
-    <a [href]="project.link" target="_blank">🔗 View on GitHub</a>
-  </div>
-</div>
+  <div class="projects-container">
+    
+    <div class="project-card reusable-card">
+      <img src="assets/images/masterchef.jpg" alt="Recipe App" class="project-img" />
+      <h3>Recipe App</h3>
+      <p>A smart pantry & recipe generator that suggests dishes based on available ingredients.</p>
+      <p class="skills-used">Skills: Angular, Firebase, TypeScript</p>
+      <a href="https://github.com/EmmanuelGR02/CEG4110-SP25-Team5" target="_blank">🔗 GitHub</a>
+    </div>
 
-<div class="contact" data-aos="fade-up">
-  <h2>Let's Connect</h2>
-  <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-  <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
-  <a href="mailto:subikshasvaidhyanathan@gmail.com">Email</a>
-</div>
+    <div class="project-card reusable-card">
+      <img src="assets/images/event.jpg" alt="Event Platform" class="project-img" />
+      <h3>Event Management Platform</h3>
+      <p>A full-stack platform to create, manage, and publish events with admin features.</p>
+      <p class="skills-used">Skills: Angular, Node.js, MongoDB</p>
+      <a href="https://github.com/subixsh04/Event-Management" target="_blank">🔗 GitHub</a>
+    </div>
+
+    <div class="project-card reusable-card">
+      <img src="assets/images/Subiksha_Profile_image.jpg" alt="Portfolio Website" class="project-img" />
+      <h3>Portfolio Website</h3>
+      <p>A personal portfolio showcasing skills, projects, and experiences using Angular.</p>
+      <p class="skills-used">Skills: Angular, HTML, CSS</p>
+      <a href="https://subixsh04.github.io/Portfolio-Website/" target="_blank">🔗 GitHub</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience" class="experience-section" data-aos="fade-up">
+  <h2>Experience</h2>
+  <div class="experience-container">
+
+    <div class="experience-card reusable-card">
+      <h3>Software Engineering Intern</h3>
+      <p class="company">Expeditors</p>
+      <p class="duration">Jun 2025 – Present</p>
+      <p>
+        Working on backend development and optimizing software solutions to
+        improve logistics processes.
+      </p>
+    </div>
+
+    <div class="experience-card reusable-card">
+      <h3>Teaching Assistant</h3>
+      <p class="company">Wright State University</p>
+      <p class="duration">Aug 2024 – Present</p>
+      <p>
+        Assisting students in understanding programming concepts and
+        conducting lab sessions for computer science courses.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="volunteer" class="volunteer-section" data-aos="fade-up">
+  <h2>Volunteer Work & Awards</h2>
+  <div class="volunteer-container">
+
+    <div class="volunteer-card reusable-card">
+      <h3>NRHH Executive Board Member</h3>
+      <p class="duration">2024 – Present</p>
+      <p>
+        Serving as an Executive Board Member for The Wright Chapter of NRHH,
+        focusing on student leadership and recognition initiatives.
+      </p>
+    </div>
+
+    <div class="volunteer-card reusable-card">
+      <h3>Director of Advocacy</h3>
+      <p class="duration">2024 – Present</p>
+      <p>
+        Advocated for student needs and contributed to initiatives that enhanced
+        student experiences within the university community.
+      </p>
+    </div>
+
+    <div class="volunteer-card reusable-card">
+      <h3>Bronze Pin Award</h3>
+      <p class="duration">2024</p>
+      <p>
+        Recognized for outstanding contributions to NRHH and campus community
+        service with the prestigious Bronze Pin Award.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer" data-aos="fade-in">
+  <p>📧 Email: 
+    <a href="mailto:subikshasvaidhyanathan@gmail.com">subikshasvaidhyanathan&#64;gmail.com</a>
+  </p>
+  <p>🔗 Connect with me:</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/subixsh04" target="_blank">LinkedIn</a>
+    <a href="https://github.com/subixsh04" target="_blank">GitHub</a>
+  </div>
+</footer>
